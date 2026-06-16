@@ -36,6 +36,12 @@ Two analytical models were trained over an 80/20 train-test split. Performance w
 
 THE MODELS:
 
+1. Linear Regression
+Linear Regression is a baseline statistical model that models the relationship between a dependent scalar variable (target) and one or more explanatory variables (features) by fitting a linear equation (a straight line) to the observed data. It assumes a constant, proportional change between inputs and outputs.
+
+2. Random Forest Regressor
+Random Forest Regressor is an advanced ensemble learning method that operates by constructing a multitude of independent decision trees during training. It maps complex, non-linear relationships by forcing separate data splits across various features and aggregates (averages) the individual tree outputs to generate a single, highly accurate final numerical prediction.
+
 | Predictive Model Configuration | $R^2$ Score (Accuracy) | Root Mean Squared Error (RMSE) |
 | :--- | :---: | :---: |
 | **Linear Regression Baseline** | 0.9539 | 4.1021 |
