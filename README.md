@@ -63,7 +63,7 @@ Install the required analytical and modeling libraries using pip:
 ```bash
 pip install numpy pandas matplotlib seaborn scikit-learn notebook
 
----
+
 Interactive dashboard
 
 For this i have used docker to compile and run the dashboard. i also used python,dockerfile, docker compose yml and streamlit.
