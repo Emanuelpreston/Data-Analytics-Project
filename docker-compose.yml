@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # Container 1: The Core Data & Storage Engine
+  data-backend:
+    image: python:3.10-slim
+    volumes:
+      - .:/app
+    working_dir: /app
+    # Installs requirements dynamically inside the container environment and runs FastAPI
+    command: sh -c "pip install fastapi uvicorn pandas python-multipart && uvicorn data_service:app --host 0.0.0.0 --port 8000"
+    expose:
+      - "8000"
+
+  # Container 2: Your Visual Front-end UI Dashboard
+  frontend-dashboard:
+    image: python:3.10-slim
+    volumes:
+      - .:/app
+    working_dir: /app
+    # Installs requirements and runs your Streamlit front-end layout
+    command: sh -c "pip install streamlit requests pandas && streamlit run app.py --server.port=8501 --server.address=0.0.0.0"
+    ports:
+      - "8501:8501"
+    depends_on:
+      - data-backend
