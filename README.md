@@ -60,23 +60,27 @@ Ensure your local environment has Python 3.10+ installed along with the required
 
 ### 1. Install Dependencies
 Install the required analytical and modeling libraries using pip:
-```bash
+```bash 
 pip install numpy pandas matplotlib seaborn scikit-learn notebook
+```
+---
+##**Docker bulid**
 
 
-Interactive dashboard
+**Interactive dashboard**
 
 For this i have used docker to compile and run the dashboard. i also used python,dockerfile, docker compose yml and streamlit.
 
 first user needs to install steamlit and fastapi in vs code terminal
-
+```
 1: pip install streamlit
 2: pip install fastapi
-
+```
 then the user needs to create folders that are named anything the user desires. In my case i used for the main file is main.py, dockerfile and docker-compose.yml
 
 then user needs to do these commands in the terminal using vs code:
+```
 1: docker compose up --build
-
+```
 then type in browser: http://localhost:your port/
 
