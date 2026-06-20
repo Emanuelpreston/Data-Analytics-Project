@@ -73,6 +73,7 @@ For this i have used docker to compile and run the dashboard. i also used python
 
 I used streamlit as my frontend and fastapi as my backend
 
+
 first user needs to install steamlit and fastapi in vs code terminal
 ```
 1: pip install streamlit
